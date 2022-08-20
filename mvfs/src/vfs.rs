@@ -542,7 +542,7 @@ impl Connection {
         Ok(false)
     }
 
-    pub fn current_lock(&self) -> Result<LockKind, std::io::Error> {
-        Ok(self.lock)
+    pub fn current_lock(&self) -> LockKind {
+        self.lock
     }
 }
